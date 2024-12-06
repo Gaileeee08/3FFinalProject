@@ -1,0 +1,65 @@
+:root {
+    --primary-color: #A8D5BA; /* Soft Green */
+    --secondary-color: #B8E2D6; /* Light Teal */
+    --accent-color: #F1F8E9; /* Soft Earth Tone */
+    --button-color: #4CAF50;  /* Calming Green for Buttons */
+    --text-color: #333333;    /* Dark Text for Readability */
+}
+
+body {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker Green on Hover */
+}
+/* Animate button hover */
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-5px); /* Subtle lift effect */
+}
+
+/* Animate card hover */
+.service-card {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+/* Default styles for larger screens */
+.service-card {
+    width: 30%;
+    margin: 10px;
+}
+
+/* Responsive for smaller screens (Tablets) */
+@media (max-width: 768px) {
+    .service-card {
+        width: 45%; /* Two items per row */
+    }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 480px) {
+    .service-card {
+        width: 100%; /* One item per row */
+    }
+
+    body {
+        font-size: 14px; /* Smaller text on mobile */
+    }
+}
