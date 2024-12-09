@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>User Dashboard</h1>
+    </header>
+    <section>
+        <h2>Upcoming Appointments</h2>
+        <div id="appointments"></div>
+        <button onclick="location.href='book-now.html'">Schedule a New Appointment</button>
+    </section>
+    <script>
+        // Simulate fetching user appointments
+        const appointments = [
+            { id: 1, service: "Massage", date: "2023-12-10", time: "10:00 AM" },
+            { id: 2, service: "Facial", date: "2023-12-12", time: "02:00 PM" }
+        ];
+
+        const appointmentsDiv = document.getElementById('appointments');
+        appointments.forEach(app => {
+            appointmentsDiv.innerHTML += `
+                <div>
+                    <h3>${app.service}</h3>
+                    <p>${app.date} at ${app.time}</p>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
